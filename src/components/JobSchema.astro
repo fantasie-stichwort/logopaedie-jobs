@@ -1,0 +1,55 @@
+---
+// src/components/JobSchema.astro
+const jobData = {
+  title: "Logopäde / Sprachtherapeut (m/w/d)",
+  description: "Werde Teil unseres deutsch-türkischen Teams in Duisburg. Flexible Arbeitszeiten, Top-Gehalt und 2 Min. vom Hbf.",
+  orgName: "Praxis für Logopädie Şimşek",
+  url: "https://logopaedie-jobs.de",
+  logo: "https://logopaedie-simsek.de/logo.png", // Ersetze dies später durch den echten Pfad
+  location: {
+    city: "Duisburg",
+    zip: "47051",
+    street: "Am Hauptbahnhof"
+  },
+  salary: {
+    min: 3800,
+    max: 5000,
+    currency: "EUR"
+  }
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify({
+  "@context": "https://schema.org/",
+  "@type": "JobPosting",
+  "title": jobData.title,
+  "description": jobData.description,
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": jobData.orgName,
+    "sameAs": jobData.url,
+    "logo": jobData.logo
+  },
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": jobData.location.street,
+      "addressLocality": jobData.location.city,
+      "postalCode": jobData.location.zip,
+      "addressCountry": "DE"
+    }
+  },
+  "baseSalary": {
+    "@type": "MonetaryAmount",
+    "currency": jobData.salary.currency,
+    "value": {
+      "@type": "QuantitativeValue",
+      "minValue": jobData.salary.min,
+      "maxValue": jobData.salary.max,
+      "unitText": "MONTH"
+    }
+  },
+  "datePosted": "2025-12-18",
+  "employmentType": "FULL_TIME"
+})} />

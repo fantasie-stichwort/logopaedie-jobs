@@ -1,0 +1,26 @@
+---
+import '../styles/global.css'; // Das lädt Tailwind v4
+// src/layouts/Layout.astro
+import JobSchema from '../components/JobSchema.astro';
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<JobSchema /> </head>
+	<body class="bg-white text-slate-900 selection:bg-teal-100 antialiased">
+		<slot />
+	</body>
+</html>

@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  /* Wir definieren die Brand-Identity direkt im CSS-Theme */
+  --color-brand-primary: oklch(0.70 0.12 185);    /* Modernes Türkis */
+  --color-brand-secondary: oklch(0.35 0.05 200);  /* Edles Dunkelblau */
+  --color-brand-accent: oklch(0.85 0.15 150);     /* Frisches Mint */
+
+  /* Systematische Spacings & Rundungen */
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2.5rem;
+  
+  --font-sans: 'Outfit Variable', 'Inter', ui-sans-serif, system-ui;
+}
+
+/* Hier können wir globale Basis-Styles für den "stylischen" Look setzen */
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+  }
+}
