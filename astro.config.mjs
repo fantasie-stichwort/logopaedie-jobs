@@ -4,9 +4,16 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  // DEINE DOMAIN HIER (Punycode für Umlaute empfohlen, oder Klartext)
+  // Deine Domain für die Sitemap-Generierung
   site: 'https://logopädiejobs.de', 
+  
   integrations: [sitemap()],
+
+  // Konfiguration für die <Image /> Komponente
+  image: {
+    domains: ["logopädiejobs.de", "xn--logopdiejobs-kcb.de"],
+  },
+
   vite: {
     plugins: [tailwindcss()]
   }
