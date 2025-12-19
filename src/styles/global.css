@@ -17,7 +17,11 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-white text-slate-900 antialiased;
+    /* Kein overflow-hidden hier! */
   }
 }
