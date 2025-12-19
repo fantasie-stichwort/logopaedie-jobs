@@ -1,34 +1,44 @@
 ---
-import '../styles/global.css'; // Das lädt Tailwind v4
-// src/layouts/Layout.astro
+import '../styles/global.css'; // Lädt Tailwind v4 inklusive deiner simsek-Farben
 import JobSchema from '../components/JobSchema.astro';
 
 interface Props {
-	title: string;
-	description: string;
+    title: string;
+    description: string;
 }
 
 const { title, description } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="de">
-	<head>
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content={Astro.url} />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:image" content={new URL('/og-image.jpg', Astro.url)} /> 
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:title" content={title} />
-		<meta property="twitter:description" content={description} />
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title}</title>
-		<meta name="description" content={description} />
-		<JobSchema /> </head>
-	<body class="bg-white text-slate-900 selection:bg-teal-100 antialiased">
-		<slot />
-	</body>
+<html lang="de" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        
+        <title>{title}</title>
+        <meta name="title" content={title} />
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonicalURL} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={new URL('/og-image.jpg', Astro.url)} /> 
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={Astro.url} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={new URL('/og-image.jpg', Astro.url)} />
+
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        
+        <JobSchema /> 
+    </head>
+    <body class="bg-white text-slate-900 selection:bg-simsek-green/20 selection:text-simsek-blue antialiased">
+        <slot />
+    </body>
 </html>
