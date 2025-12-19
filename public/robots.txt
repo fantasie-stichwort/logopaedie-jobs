@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Hier den Pfad zur generierten Sitemap angeben
+Sitemap: https://logopädiejobs.de/sitemap-index.xml
