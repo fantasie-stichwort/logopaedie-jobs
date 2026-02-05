@@ -2,26 +2,26 @@
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import Hero from '../components/Hero.astro';
-import Aufgaben from '../components/Aufgaben.astro';
-import QuickApply from '../components/QuickApply.astro';
-import Benefits from '../components/Benefits.astro';
-import About from '../components/About.astro';
-import Gallery from '../components/Gallery.astro';
+import Services from '../components/Services.astro';
+import Team from '../components/Team.astro';
+import Testimonials from '../components/Testimonials.astro';
+import FAQ from '../components/FAQ.astro';
+import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 
-const pageTitle = "Logopädie Jobs Duisburg | Praxis für Logopädie Şimşek";
-const pageDescription = "Dein neuer Job als Logopädin in Duisburg! Tonhallenstraße 21 (2 Min. vom Hbf), Top-Gehalt, flexible Zeiten & ein tolles Team.";
+const pageTitle = "Logopädie-Praxis Duisburg | Individuelle Therapien für Kinder & Erwachsene";
+const pageDescription = "Spezialisierte Logopädie-Therapie in Duisburg. Wir bieten individuelle Behandlung für Sprachentwicklung, Stimmstörungen, Schluckstörungen und mehr. 20+ Jahre Erfahrung.";
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
   <Navigation />
   <main>
     <Hero />
-    <Aufgaben />
-    <QuickApply />
-    <Benefits />
-    <About />
-    <Gallery />
+    <Services />
+    <Team />
+    <Testimonials />
+    <FAQ />
+    <Contact />
   </main>
   <Footer />
 </Layout>

@@ -1,17 +1,19 @@
 ---
-import { Image } from 'astro:assets';
+// Navigation.astro
 ---
 <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="/" class="block hover:opacity-90 transition-opacity">
-      <Image src="https://logopädiejobs.de/logo@2x.svg" alt="Praxis für Logopädie Şimşek" width={180} height={48} class="h-10 md:h-12 w-auto" loading="eager" />
+    <a href="/" class="block hover:opacity-90 transition-opacity font-bold text-xl text-slate-900">
+      🎤 Logopädie-Praxis
     </a>
     <div class="hidden md:flex items-center gap-8">
-      <a href="#aufgaben" class="text-sm font-semibold text-slate-600 hover:text-simsek-blue transition-colors no-underline">Was dich erwartet</a>
-      <a href="#benefits" class="text-sm font-semibold text-slate-600 hover:text-simsek-blue transition-colors no-underline">Vorteile</a>
-      <a href="#apply" class="text-sm font-semibold text-slate-600 hover:text-simsek-blue transition-colors no-underline">Bewerbung</a>
+      <a href="#leistungen" class="text-sm font-semibold text-slate-600 hover:text-simsek-blue transition-colors no-underline">Leistungen</a>
+      <a href="#uber-uns" class="text-sm font-semibold text-slate-600 hover:text-simsek-blue transition-colors no-underline">Team</a>
+      <a href="#kontakt" class="text-sm font-semibold text-slate-600 hover:text-simsek-blue transition-colors no-underline">Kontakt</a>
       <div class="h-4 w-[1px] bg-slate-200"></div>
-      <a href="https://logopaedie-simsek.de" target="_blank" class="text-xs font-bold text-simsek-green hover:text-simsek-blue uppercase tracking-wider no-underline">Zur Praxis</a>
+      <a href="#kontakt" class="px-6 py-2 bg-simsek-green text-white font-bold rounded-xl hover:bg-simsek-green/90 transition-colors no-underline text-sm">
+        Termin buchen
+      </a>
     </div>
   </div>
 </nav>

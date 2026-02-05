@@ -1,0 +1,195 @@
+---
+// Contact.astro - Erweiterte Kontaktsektion
+---
+
+<section id="kontakt" class="py-20 bg-gradient-to-b from-white to-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="mb-16 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Kontaktieren Sie uns</h2>
+      <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+        Wir freuen uns auf Sie! Vereinbaren Sie einen Termin oder stellen Sie Ihre Fragen
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8 mb-16">
+      <!-- Contact Info Cards -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-100 text-center hover:shadow-xl transition-shadow">
+        <div class="w-14 h-14 bg-simsek-green/10 rounded-xl flex items-center justify-center text-simsek-green mx-auto mb-4">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 00.948-.684l1.498-4.493a1 1 0 011.502-.684l1.498 4.493a1 1 0 00.948.684H19a2 2 0 012 2v1M3 5H1m4 0h4m5 0h4m5 0h2M3 11h18M3 15h18M3 19h18"></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Anrufen</h3>
+        <p class="text-slate-600 text-sm mb-4">Mo-Fr: 09:00 - 17:00 Uhr</p>
+        <a href="tel:+492031234567" class="text-simsek-green font-bold hover:text-simsek-green/80 transition-colors">(0203) 123-4567</a>
+      </div>
+
+      <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-100 text-center hover:shadow-xl transition-shadow">
+        <div class="w-14 h-14 bg-simsek-blue/10 rounded-xl flex items-center justify-center text-simsek-blue mx-auto mb-4">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">E-Mail</h3>
+        <p class="text-slate-600 text-sm mb-4">Wir antworten innerhalb von 24h</p>
+        <a href="mailto:info@logopaedie-praxis.de" class="text-simsek-blue font-bold hover:text-simsek-blue/80 transition-colors">info@logopaedie-praxis.de</a>
+      </div>
+
+      <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-100 text-center hover:shadow-xl transition-shadow">
+        <div class="w-14 h-14 bg-simsek-green/10 rounded-xl flex items-center justify-center text-simsek-green mx-auto mb-4">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Adresse</h3>
+        <p class="text-slate-600 text-sm">Tonhallenstraße 21<br/>47051 Duisburg</p>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="grid lg:grid-cols-2 gap-12">
+      <div>
+        <h3 class="text-2xl font-bold text-slate-900 mb-6">Schnelle Anfrage</h3>
+        <form class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-bold text-slate-900 mb-2">Name *</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Ihr Name"
+              class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:border-simsek-green focus:ring-2 focus:ring-simsek-green/20 transition-colors"
+              required
+            />
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label for="email" class="block text-sm font-bold text-slate-900 mb-2">E-Mail *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="E-Mail"
+                class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:border-simsek-green focus:ring-2 focus:ring-simsek-green/20 transition-colors"
+                required
+              />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-bold text-slate-900 mb-2">Telefon</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="(0203) 123-4567"
+                class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:border-simsek-green focus:ring-2 focus:ring-simsek-green/20 transition-colors"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="subject" class="block text-sm font-bold text-slate-900 mb-2">Betreff *</label>
+            <select
+              id="subject"
+              name="subject"
+              class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:border-simsek-green focus:ring-2 focus:ring-simsek-green/20 transition-colors"
+              required
+            >
+              <option value="">-- Bitte wählen --</option>
+              <option value="termin">Termin vereinbaren</option>
+              <option value="info">Allgemeine Informationen</option>
+              <option value="frage">Frage zur Therapie</option>
+              <option value="sonstiges">Sonstiges</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-bold text-slate-900 mb-2">Nachricht *</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Ihre Nachricht..."
+              rows="5"
+              class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:border-simsek-green focus:ring-2 focus:ring-simsek-green/20 transition-colors resize-none"
+              required
+            ></textarea>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <input
+              type="checkbox"
+              id="privacy"
+              name="privacy"
+              class="w-5 h-5 mt-1 border-slate-300 rounded accent-simsek-green cursor-pointer"
+              required
+            />
+            <label for="privacy" class="text-sm text-slate-600">
+              Ich stimme zu, dass meine Daten zur Kontaktaufnahme verwendet werden. *
+            </label>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full px-8 py-4 bg-simsek-green text-white font-bold rounded-2xl shadow-lg shadow-simsek-green/25 hover:scale-[1.02] active:scale-[0.98] transition-transform"
+          >
+            Anfrage senden
+          </button>
+        </form>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-bold text-slate-900 mb-6">Öffnungszeiten & Info</h3>
+
+        <div class="bg-gradient-to-br from-simsek-green/5 to-simsek-blue/5 rounded-2xl p-8 border border-slate-100 mb-6">
+          <h4 class="font-bold text-slate-900 mb-4">Sprechzeiten</h4>
+          <div class="space-y-3 text-slate-700">
+            <div class="flex justify-between">
+              <span>Montag - Freitag:</span>
+              <span class="font-semibold">09:00 - 17:00 Uhr</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Samstag:</span>
+              <span class="font-semibold">Nach Vereinbarung</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Sonntag:</span>
+              <span class="font-semibold">Geschlossen</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-slate-100 space-y-6">
+          <div>
+            <h4 class="font-bold text-slate-900 mb-2">Anfahrt</h4>
+            <p class="text-slate-600 text-sm">
+              Tonhallenstraße 21, 47051 Duisburg<br/>
+              (2 Minuten vom Hauptbahnhof)<br/>
+              Kostenlose Parkplätze auf dem Gelände
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-slate-900 mb-2">Versicherungen</h4>
+            <p class="text-slate-600 text-sm">
+              Wir akzeptieren:<br/>
+              • Alle gesetzlichen Krankenkassen<br/>
+              • Private Versicherungen<br/>
+              • Selbstbezahler
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-slate-900 mb-2">Ausstattung</h4>
+            <p class="text-slate-600 text-sm">
+              ✓ Barrierefreier Zugang<br/>
+              ✓ Behinderten-WC<br/>
+              ✓ Moderne Therapieräume<br/>
+              ✓ Parkplätze in unmittelbarer Nähe
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
