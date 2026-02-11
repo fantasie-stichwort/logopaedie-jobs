@@ -1,10 +1,11 @@
 ---
-import { Image } from 'astro:assets';
+// Importiere die neue Logo-Komponente
+import Logo from './Logo.astro';
 ---
 <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="/" class="block hover:opacity-90 transition-opacity">
-      <Image src="https://logopädiejobs.de/logo@2x.svg" alt="Praxis für Logopädie Şimşek" width={180} height={48} class="h-10 md:h-12 w-auto" loading="eager" />
+    <a href="/" class="block hover:opacity-90 transition-opacity" aria-label="Zur Startseite">
+      <Logo class="h-10 md:h-12 w-auto" />
     </a>
     <div class="hidden md:flex items-center gap-8">
       <a href="#aufgaben" class="text-sm font-semibold text-slate-600 hover:text-simsek-blue transition-colors no-underline">Was dich erwartet</a>

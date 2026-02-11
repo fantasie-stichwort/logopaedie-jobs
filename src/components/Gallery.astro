@@ -1,21 +1,42 @@
 ---
+// src/components/Gallery.astro
 ---
 <section id="galerie" class="py-24 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-slate-900 mb-12 uppercase">Einblicke</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="aspect-square bg-white rounded-[2.5rem] flex flex-col items-center justify-center p-8 border-2 border-dashed border-slate-200">
-          <p class="font-bold text-slate-500 mb-2">Therapieräume</p>
-          <p class="text-xs text-slate-400 italic">Modern & Hell</p>
-        </div>
-        <div class="aspect-square bg-white rounded-[2.5rem] flex flex-col items-center justify-center p-8 border-2 border-dashed border-slate-200">
-          <p class="font-bold text-slate-500 mb-2 text-pretty">Eingang (3. OG)</p>
-          <p class="text-xs text-slate-400 italic">Mit Aufzug erreichbar</p>
-        </div>
-        <div class="aspect-square bg-white rounded-[2.5rem] flex flex-col items-center justify-center p-8 border-2 border-dashed border-slate-200 text-pretty">
-          <p class="font-bold text-slate-500 mb-2">Materialraum</p>
-          <p class="text-xs text-slate-400 italic">Bestens ausgestattet</p>
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-slate-900 mb-12 uppercase">Einblicke in unsere Praxis</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      
+      <div class="group relative">
+        <div class="aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white bg-white transition-transform duration-500 group-hover:scale-[1.02]">
+          <img 
+            src="/praxis-bild-1.jpg" 
+            alt="Einblick in die Praxisräume" 
+            class="w-full h-full object-cover"
+          />
         </div>
       </div>
+
+      <div class="group relative">
+        <div class="aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white bg-white transition-transform duration-500 group-hover:scale-[1.02]">
+          <img 
+            src="/praxis-bild-2.jpg" 
+            alt="Therapiematerial und Spielbereich" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+      <div class="group relative">
+        <div class="aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white bg-white transition-transform duration-500 group-hover:scale-[1.02]">
+          <img 
+            src="/praxis-bild-3.jpg" 
+            alt="Heller Therapieraum" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>

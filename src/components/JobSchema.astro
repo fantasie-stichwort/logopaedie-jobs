@@ -1,11 +1,25 @@
 ---
 // src/components/JobSchema.astro
+
+// 1. Datum automatisch auf "Heute" setzen (für Google Frische-Bonus)
+const today = new Date();
+const datePosted = today.toISOString().split('T')[0];
+
+// 2. Ablaufdatum automatisch auf "Heute + 3 Monate"
+const validUntil = new Date();
+validUntil.setMonth(validUntil.getMonth() + 3);
+const validThrough = validUntil.toISOString().split('T')[0];
+
+// 3. Deine ECHTEN Daten
 const jobData = {
   title: "Logopäde / Sprachtherapeut (m/w/d)",
   description: "Werde Teil unseres bilingualen Teams (Deutsch-Türkisch) in Duisburg. Wir bieten Spezialisierungen in Pädiatrie, Neurologie und Stimmtherapie (ISTP, Lax Vox®). Genieße eine flexible 4-Tage-Woche, Top-Gehalt und moderne Praxisräume im 3. OG (mit Aufzug) direkt in der Tonhallenstraße 21, nur 2 Min. vom Hbf.",
   orgName: "Praxis für Logopädie Şimşek",
-  url: "https://logopaedie-simsek.de",
-  logo: "https://logopädiejobs.de/logo@2x.svg", 
+  
+  // HIER SIND DIE PLATZHALTER JETZT ERSETZT:
+  url: "https://xn--logopdiejobs-kcb.de/", 
+  logo: "https://xn--logopdiejobs-kcb.de/logo.svg", // Achtung: Stelle sicher, dass logo.png im 'public' Ordner liegt!
+  
   location: {
     city: "Duisburg",
     zip: "47051",
@@ -13,7 +27,7 @@ const jobData = {
   },
   salary: {
     min: 3800,
-    max: 5200, // Leicht angepasst für "Top-Gehalt" Anmutung
+    max: 5200, 
     currency: "EUR"
   }
 };
@@ -24,6 +38,11 @@ const jobData = {
   "@type": "JobPosting",
   "title": jobData.title,
   "description": jobData.description,
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": jobData.orgName,
+    "value": "LOGO-JOB-DUI-01"
+  },
   "hiringOrganization": {
     "@type": "Organization",
     "name": jobData.orgName,
@@ -50,10 +69,10 @@ const jobData = {
       "unitText": "MONTH"
     }
   },
-  "datePosted": "2025-12-19",
-  "validThrough": "2026-06-30",
+  "datePosted": datePosted,
+  "validThrough": validThrough,
   "employmentType": "FULL_TIME",
-  "directApply": true,
+  "directApply": true, 
   "jobBenefits": "4-Tage-Woche möglich, 100% Fortbildungskosten, zentrale Lage am Hbf, modernes Material",
   "occupationalCategory": "29-1127.00"
 })} />
